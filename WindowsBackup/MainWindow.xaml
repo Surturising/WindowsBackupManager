@@ -1,0 +1,46 @@
+﻿<Window x:Class="WindowsBackup.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsBackup"
+        mc:Ignorable="d"
+        Title="Windows Backup Manager" Height="550" Width="1000" WindowStartupLocation="CenterScreen" Icon="icon\Menu.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel x:Name="stack_MainMenu" Orientation="Vertical"  Grid.Column="0" Margin="0,0,0,0" VerticalAlignment="Bottom">
+
+            <Button Background="LightGray" x:Name="btn_Home" ToolTip="Home" Click="btn_Home_Click">
+                <Image Source="icon\home.png" Height="50" Width="40"></Image>
+            </Button>
+
+            <Button Background="LightGray" x:Name="btn_Festplattenverwaltung" ToolTip="Festplattenverwaltung" Click="btn_Festplattenverwaltung_Click">
+                <Image Source="icon\exthard_drive.png" Height="50" Width="40"></Image>
+            </Button>
+
+            <Button Background="LightGray" x:Name="btn_Zeitplan" ToolTip="Backup-Zeitplan" Click="btn_Zeitplan_Click">
+                <Image Source="icon\calender.png" Height="50" Width="40"></Image>
+            </Button>
+
+            <Button Background="LightGray" x:Name="btn_Mail" ToolTip="E-Mail Benachrichtigungen" Click="btn_Mail_Click">
+                <Image Source="icon\mail.png" Height="50" Width="40"></Image>
+            </Button>
+
+            <Button Background="LightGray" x:Name="btn_Ruecksicherung" ToolTip="Backup Rücksicherung" Click="btn_Ruecksicherung_Click">
+                <Image Source="icon\restore.png" Height="50" Width="40"></Image>
+            </Button>
+
+            <Button Background="LightGray" x:Name="btn_exit" ToolTip="Exit" Click="btn_exit_Click">
+                <Image Source="icon\exit.png" Height="50" Width="40"></Image>
+            </Button>
+
+        </StackPanel>
+
+        <Frame x:Name="Frame" Grid.Column="1" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</Window>

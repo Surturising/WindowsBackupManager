@@ -1,0 +1,39 @@
+﻿<Page x:Class="WindowsBackup.Page_Schedule"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowsBackup"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page_Schedule">
+
+    <Grid>
+        <StackPanel Margin="70,100,100,0">
+            <TextBlock Text="Backup-Zeitplan:" FontWeight="Bold" FontSize="14"></TextBlock>
+            <TextBlock Text="Wochentage:"></TextBlock>
+            <StackPanel x:Name="sp_Weekdays" Orientation="Horizontal" Margin="0,10,0,0">
+                <CheckBox x:Name="cb_Monday" Content="Montag" Margin="20,0,0,0"></CheckBox>
+                <CheckBox x:Name="cb_Tuesday" Content="Dienstag" Margin="20,0,0,0"></CheckBox>
+                <CheckBox x:Name="cb_Wednesday" Content="Mittwoch" Margin="20,0,0,0"></CheckBox>
+                <CheckBox x:Name="cb_Thursday" Content="Donnerstag" Margin="20,0,0,0"></CheckBox>
+                <CheckBox x:Name="cb_Friday" Content="Freitag" Margin="20,0,0,0"></CheckBox>
+            </StackPanel>
+            <StackPanel x:Name="sp_Weekend" Orientation="Horizontal">
+                <CheckBox x:Name="cb_Saturday" Content="Samstag" Margin="20,0,0,0"></CheckBox>
+                <CheckBox x:Name="cb_Sunday" Content="Sonntag" Margin="20,0,0,0"></CheckBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20">
+                <TextBlock Text="Uhrzeit: "  Margin="0,0,0,0"></TextBlock>
+                <TextBox x:Name="tb_Hours" Text="" Width="20"></TextBox>
+                <TextBlock Text=":"></TextBlock>
+                <TextBox x:Name="tb_Minutes" Text="" Width="20"></TextBox>
+            </StackPanel>
+            <CheckBox x:Name="cb_Shutdown" Content="Nach Sicherung PC herunterfahren"  Margin="20,0,0,0"></CheckBox>
+            
+        </StackPanel>
+
+        <Button x:Name="bt_Save" Content="Einstellungen speichern" VerticalAlignment="Bottom" Height="40" Margin="20" Click="bt_Save_Click"></Button>
+
+    </Grid>
+</Page>
