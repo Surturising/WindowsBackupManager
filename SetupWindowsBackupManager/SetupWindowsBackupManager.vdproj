@@ -40,6 +40,12 @@
         "Entry"
         {
         "MsmKey" = "8:_AC034D5945F1B5E638F556141974B4BE"
+        "OwnerKey" = "8:_4C4EEB26C16B498992E7280DEA664C86"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AC034D5945F1B5E638F556141974B4BE"
         "OwnerKey" = "8:_FFE51434FB6043ED8FB7813D0B695D64"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -51,12 +57,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_AC034D5945F1B5E638F556141974B4BE"
-        "OwnerKey" = "8:_4C4EEB26C16B498992E7280DEA664C86"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_FFE51434FB6043ED8FB7813D0B695D64"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -64,7 +64,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AC034D5945F1B5E638F556141974B4BE"
+        "OwnerKey" = "8:_FFE51434FB6043ED8FB7813D0B695D64"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -88,7 +88,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FFE51434FB6043ED8FB7813D0B695D64"
+        "OwnerKey" = "8:_AC034D5945F1B5E638F556141974B4BE"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -109,6 +109,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -125,6 +133,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -315,7 +331,7 @@
         "Manufacturer" = "8:David Heyn"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:SetupWindowsBackupManager"
+        "Title" = "8:WindowsBackupManager"
         "Subject" = "8:"
         "ARPCONTACT" = "8:David Heyn"
         "Keywords" = "8:"
