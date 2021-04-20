@@ -76,11 +76,11 @@ namespace WindowsBackup
             {
                 MessageBox.Show("Prozess kann nicht auf die userdata_drives.xml zugreifen. Bitte noch einmal auf 'Einstellungen speichern' klicken!", "Fehler beim Speichern der Laufwerksdaten", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            /*catch (Exception)
+            catch (Exception)
             {
 
                 MessageBox.Show("Unbekannter Fehler", "Unbekannter Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
-            }*/
+            }
 
 
         }
@@ -179,11 +179,6 @@ namespace WindowsBackup
             Stack_SystemDrives.Children.Clear();
             lb_availableBackupDrives.Items.Clear();
             lb_backupDrives.Items.Clear();
-
-            TextBlock bezeichnungen = new TextBlock();
-            bezeichnungen.Text = $"ID\tSeriennummer\tgesamt\tfrei\tgenutzt\tBezeichnung";
-
-            Stack_SystemDrives.Children.Add(bezeichnungen);
 
             //Hinzufügen Systemdrives
             foreach (DriveInformation drive in DriveInformation.GetAllDrives())
