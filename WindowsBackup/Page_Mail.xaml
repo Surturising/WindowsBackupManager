@@ -47,7 +47,6 @@
                 <PasswordBox x:Name="pwb_Passwort" MinWidth="110"></PasswordBox>
             </StackPanel>
         </StackPanel>
-        <Button x:Name="bt_Save" Content="Einstellungen speichern" VerticalAlignment="Bottom" Height="40" Margin="20" Click="bt_Save_Click"></Button>
-
+        <Button x:Name="bt_Save" Content="Einstellungen speichern" VerticalAlignment="Bottom" Height="40" Margin="70, 20,20,20" Click="bt_Save_Click"></Button>
     </Grid>
 </Page>

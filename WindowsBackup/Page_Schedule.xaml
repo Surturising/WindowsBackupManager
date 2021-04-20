@@ -30,10 +30,7 @@
                 <TextBox x:Name="tb_Minutes" Text="" Width="20"></TextBox>
             </StackPanel>
             <CheckBox x:Name="cb_Shutdown" Content="Nach Sicherung PC herunterfahren"  Margin="20,0,0,0"></CheckBox>
-            
         </StackPanel>
-
-        <Button x:Name="bt_Save" Content="Einstellungen speichern" VerticalAlignment="Bottom" Height="40" Margin="20" Click="bt_Save_Click"></Button>
-
+        <Button x:Name="bt_Save" Content="Einstellungen speichern" VerticalAlignment="Bottom" Height="40" Margin="70, 20,20,20" Click="bt_Save_Click"></Button>
     </Grid>
 </Page>
