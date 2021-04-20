@@ -116,6 +116,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -318,9 +326,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:SetupWindowsBackupManager"
+        "ProductName" = "8:WindowsBackupManager"
         "ProductCode" = "8:{6DF3A6A3-0B2B-4659-833F-B9C2538923F9}"
-        "PackageCode" = "8:{ACE7D664-3695-4578-B801-8F717112B5DF}"
+        "PackageCode" = "8:{BB1FE054-0924-4B4E-A7A1-A10948410FA2}"
         "UpgradeCode" = "8:{3E329DC1-1A30-42BF-886B-450312893399}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
