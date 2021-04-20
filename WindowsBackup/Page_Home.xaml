@@ -14,7 +14,7 @@
 
             <StackPanel x:Name="sp_DiagramsIsSuccessfull" Margin="0,10,0,0" Orientation="Horizontal"></StackPanel >
         </StackPanel>
-        <Button x:Name="bt_StartBackup" Content="Sicherung Starten" VerticalAlignment="Bottom" Height="40" Margin="70,0,20,70" Click="bt_StartBackup_Click"></Button>
-        <Button x:Name="bt_DeleteConfig" Content="Konfiguration zurücksetzen" VerticalAlignment="Bottom" Height="40" Margin="70, 20,20,20" Click="bt_DeleteConfig_Click"></Button>
+        <Button x:Name="bt_StartBackup" Content="Sicherung Starten" VerticalAlignment="Bottom" Height="40" Margin="70,0,50,70" Click="bt_StartBackup_Click"></Button>
+        <Button x:Name="bt_DeleteConfig" Content="Konfiguration zurücksetzen" VerticalAlignment="Bottom" Height="40" Margin="70, 20,50,20" Click="bt_DeleteConfig_Click"></Button>
     </Grid>
 </Page>

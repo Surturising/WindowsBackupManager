@@ -26,17 +26,10 @@ namespace WindowsBackup
             InitializeComponent();
 
             string xmlUserdataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\WindowsBackupManager";
-            string mountVHDPSScript = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\WindowsBackupManager" + "\\Mount-VHDXBackup.ps1";
-            string copyVHDBackupScript = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\WindowsBackupManager" + "\\Move-VHDXBackup.ps1";
 
             if (Directory.Exists(xmlUserdataFolder) == false)
             {
                 Directory.CreateDirectory(xmlUserdataFolder);
-            }
-
-            if (File.Exists(mountVHDPSScript) == false)
-            {
-                File.Copy("..\\..\\Scripts\\Mount-VHDXBackup.ps1", mountVHDPSScript);
             }
 
             Frame.Content = new Page_Home();

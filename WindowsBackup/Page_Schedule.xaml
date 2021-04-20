@@ -13,24 +13,24 @@
             <TextBlock Text="Backup-Zeitplan:" FontWeight="Bold" FontSize="14"></TextBlock>
             <TextBlock Text="Wochentage:"></TextBlock>
             <StackPanel x:Name="sp_Weekdays" Orientation="Horizontal" Margin="0,10,0,0">
-                <CheckBox x:Name="cb_Monday" Content="Montag" Margin="20,0,0,0"></CheckBox>
+                <CheckBox x:Name="cb_Monday" Content="Montag" Margin="0,0,0,0"></CheckBox>
                 <CheckBox x:Name="cb_Tuesday" Content="Dienstag" Margin="20,0,0,0"></CheckBox>
                 <CheckBox x:Name="cb_Wednesday" Content="Mittwoch" Margin="20,0,0,0"></CheckBox>
                 <CheckBox x:Name="cb_Thursday" Content="Donnerstag" Margin="20,0,0,0"></CheckBox>
                 <CheckBox x:Name="cb_Friday" Content="Freitag" Margin="20,0,0,0"></CheckBox>
             </StackPanel>
             <StackPanel x:Name="sp_Weekend" Orientation="Horizontal">
-                <CheckBox x:Name="cb_Saturday" Content="Samstag" Margin="20,10,0,0"></CheckBox>
+                <CheckBox x:Name="cb_Saturday" Content="Samstag" Margin="0,10,0,0"></CheckBox>
                 <CheckBox x:Name="cb_Sunday" Content="Sonntag" Margin="17,10,0,0"></CheckBox>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="20">
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                 <TextBlock Text="Uhrzeit: "  Margin="0,0,0,0"></TextBlock>
                 <TextBox x:Name="tb_Hours" Text="" Width="20"></TextBox>
                 <TextBlock Text=":"></TextBlock>
                 <TextBox x:Name="tb_Minutes" Text="" Width="20"></TextBox>
             </StackPanel>
-            <CheckBox x:Name="cb_Shutdown" Content="Nach Sicherung PC herunterfahren"  Margin="20,0,0,0"></CheckBox>
+            <CheckBox x:Name="cb_Shutdown" Content="Nach Sicherung PC herunterfahren"  Margin="0,20,0,0"></CheckBox>
         </StackPanel>
-        <Button x:Name="bt_Save" Content="Einstellungen speichern" VerticalAlignment="Bottom" Height="40" Margin="70, 20,20,20" Click="bt_Save_Click"></Button>
+        <Button x:Name="bt_Save" Content="Einstellungen speichern" VerticalAlignment="Bottom" Height="40" Margin="70, 20,50,20" Click="bt_Save_Click"></Button>
     </Grid>
 </Page>

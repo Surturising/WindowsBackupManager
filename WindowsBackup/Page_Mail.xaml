@@ -20,33 +20,33 @@
             <TextBlock Text="E-Mail Einstellungen:" FontWeight="Bold" FontSize="14"></TextBlock>
             <StackPanel Orientation="Horizontal" Margin="0, 10">
                 <TextBlock Text="Absender: "></TextBlock>
-                <TextBox x:Name="tb_Absender" Text="absender@mail.de" MinWidth="230" FontStyle="Italic"></TextBox>
+                <TextBox x:Name="tb_Absender" Text="absender@mail.de" MinWidth="230" FontStyle="Italic" Margin="27,0,0,0"></TextBox>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <TextBlock Text="Empfänger: "></TextBlock>
-                <ListBox x:Name="lb_Empfaenger" MinWidth="100">
-                    <TextBox x:Name="lbi_NewEmpfaenger" Text="empfaenger@mail.de" FontStyle="Italic" Width="200" PreviewMouseLeftButtonDown="lbi_NewEmpfaenger_PreviewMouseLeftButtonDown"></TextBox>
+                <ListBox x:Name="lb_Empfaenger" MinWidth="230" Margin="20,0,0,0">
+                    <TextBox x:Name="lbi_NewEmpfaenger" Text="empfaenger@mail.de" FontStyle="Italic" PreviewMouseLeftButtonDown="lbi_NewEmpfaenger_PreviewMouseLeftButtonDown"></TextBox>
                 </ListBox>
-                <Button x:Name="bt_Hinzufuegen" Content="Hinzufügen" Click="bt_Hinzufuegen_Click"></Button>
-                <Button x:Name="bt_Entfernen" Content="Entfernen" Click="bt_Entfernen_Click"></Button>
+                <Button x:Name="bt_Hinzufuegen" Content="Hinzufügen" Click="bt_Hinzufuegen_Click" Margin="2,0,0,0" Width="70"></Button>
+                <Button x:Name="bt_Entfernen" Content="Entfernen" Click="bt_Entfernen_Click" Margin="2,0,0,0" Width="70"></Button>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <TextBlock Text="SMTP Server: "></TextBlock>
-                <TextBox x:Name="tb_Smtp" Text="smtp.mail.de" MinWidth="210" FontStyle="Italic" ToolTip="smtp.gmail.com"></TextBox>
+                <TextBox x:Name="tb_Smtp" Text="smtp.mail.de" MinWidth="230" FontStyle="Italic" ToolTip="smtp.gmail.com" Margin="14,0,0,0"></TextBox>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <TextBlock Text="Benutzername: "></TextBlock>
-                <TextBox x:Name="tb_Username" Text="username@mail.com" MinWidth="200" FontStyle="Italic"></TextBox>
+                <TextBox x:Name="tb_Username" Text="username@mail.com" MinWidth="230" FontStyle="Italic" Margin="5,0,0,0"></TextBox>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Passwort: "/>
-                <PasswordBox x:Name="pwb_Passwort" MinWidth="110"></PasswordBox>
+                <PasswordBox x:Name="pwb_Passwort" MinWidth="230" Margin="35,0,0,0"></PasswordBox>
             </StackPanel>
         </StackPanel>
-        <Button x:Name="bt_Save" Content="Einstellungen speichern" VerticalAlignment="Bottom" Height="40" Margin="70, 20,20,20" Click="bt_Save_Click"></Button>
+        <Button x:Name="bt_Save" Content="Einstellungen speichern" VerticalAlignment="Bottom" Height="40" Margin="70, 20,50,20" Click="bt_Save_Click"></Button>
     </Grid>
 </Page>

@@ -14,11 +14,10 @@ namespace WindowsBackup
     /// </summary>
     public partial class Page_Restore : Page
     {
-        string mountVHDPSScript = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\WindowsBackupManager" + "\\Mount-VHDXBackup.ps1";
         string xmlUserdataDrives = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\WindowsBackupManager\\userdata_drives.xml";
         string backupFolder = "\\WindowsBackupManager";
         string windowsImageBackupFolder = "\\WindowsImageBackup";
-        string anleitungRestoreImage = "..\\..\\PDf\\Anleitung_RestoreImage.pdf";
+        string anleitungRestoreImage = "PDf\\Anleitung_RestoreImage.pdf";
 
         public Page_Restore()
         {
@@ -96,7 +95,7 @@ namespace WindowsBackup
 
             try
             {
-                
+                /*
                 DirectoryInfo backupFolder = new DirectoryInfo((cb_Backups.SelectedItem as ComboBoxItem).ToolTip.ToString());
 
                 Process mountBackup = new Process();
@@ -106,6 +105,7 @@ namespace WindowsBackup
                 mountBackup.StartInfo.Arguments = $"-NoProfile -ExecutionPolicy Bypass -Command \"{mountVHDPSScript} -BackupFolder {backupFolder.FullName}\"";
                 mountBackup.Start();
                 mountBackup.WaitForExit();
+                */
             }
             catch (System.NullReferenceException)
             {
@@ -126,7 +126,7 @@ namespace WindowsBackup
                 DirectoryInfo backupFolder = new DirectoryInfo((cb_Backups.SelectedItem as ComboBoxItem).ToolTip.ToString() + "\\WindowsImageBackup");
 
                 Process copyBackup = new Process();
-                copyBackup.StartInfo.FileName = "..\\..\\..\\MoveBackup\\bin\\Debug\\MoveBackup.exe";
+                copyBackup.StartInfo.FileName = "MoveBackup.exe";
                 copyBackup.StartInfo.Verb = "runas";
                 copyBackup.StartInfo.Arguments = $"/Backup: {backupFolder.FullName}";
                 copyBackup.Start();
