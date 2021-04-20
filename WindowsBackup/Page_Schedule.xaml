@@ -20,8 +20,8 @@
                 <CheckBox x:Name="cb_Friday" Content="Freitag" Margin="20,0,0,0"></CheckBox>
             </StackPanel>
             <StackPanel x:Name="sp_Weekend" Orientation="Horizontal">
-                <CheckBox x:Name="cb_Saturday" Content="Samstag" Margin="20,0,0,0"></CheckBox>
-                <CheckBox x:Name="cb_Sunday" Content="Sonntag" Margin="20,0,0,0"></CheckBox>
+                <CheckBox x:Name="cb_Saturday" Content="Samstag" Margin="20,10,0,0"></CheckBox>
+                <CheckBox x:Name="cb_Sunday" Content="Sonntag" Margin="17,10,0,0"></CheckBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20">
                 <TextBlock Text="Uhrzeit: "  Margin="0,0,0,0"></TextBlock>
