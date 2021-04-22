@@ -24,4 +24,4 @@ Es lassen sich nur Full-Backups erstellen.
 ![grafik](https://user-images.githubusercontent.com/72456947/115730836-ebaf2000-a386-11eb-936d-39a605f9b444.png)
 
 # Backup Rücksicherung - Wiederherstellung von Backups
-![grafik](https://user-images.githubusercontent.com/72456947/115731056-1dc08200-a387-11eb-9951-93a3bcc98c15.png)
+![grafik](https://user-images.githubusercontent.com/72456947/115731235-42b4f500-a387-11eb-8758-2fc758d9d7a2.png)
