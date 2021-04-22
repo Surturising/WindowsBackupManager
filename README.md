@@ -1,7 +1,7 @@
 
 # Windows Backup Manager
-Ein Tool mit dem man, mithilfe des Windows internen Programms "wbadmin.exe", Windows Vollbackups auf verschiednenen Festplatten erstellen und verwalten kann.
-Es lassen sich nur Full-Backups erstellen.
+Eine Tool mit dem man, mithilfe des integrierten Windows Tools "wbadmin.exe", Windows Vollbackups auf verschiednenen Festplatten erstellen und verwalten kann.
+!Es lassen sich nur Full-Backups erstellen.
 
 # Zusammenfassung
 
