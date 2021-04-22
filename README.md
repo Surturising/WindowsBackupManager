@@ -1,3 +1,3 @@
 
-# ![Alt text](web/images/MD4XAML28.png "Windows Backup Manager") Windows Backup Manager
+# ![Alt text]("Windows Backup Manager") Windows Backup Manager
 Ein Tool mit dem man, mithilfe von dem Windows internen Programm wbadmin.exe, Windows Vollbackups auf verschiednenen Festplatten erstellen und verwalten kann.
