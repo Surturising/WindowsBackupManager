@@ -4,7 +4,6 @@ Param(
 
 )
 
-$BackupFolder = "D:\WindowsBackupManager\25092020"
 
 $Letters = 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 
@@ -25,16 +24,17 @@ $VHDBackup = Get-ChildItem -Path "$BackupFolder\WindowsImageBackup\" *.vhdx -Rec
 
 $VHDBackup
 
-Mount-VHD -Path $VHDBackup.FullName
-
-$Disk = Get-Disk | Where-Object -Property Location -EQ $VHDBackup.FullName
-$Disk
-
-Write-Host 'Suche Partition'
-Get-Partition | Where-Object -Property DiskID -EQ $Disk.Path | Sort-Object -Property Size -Descending | Select-Object -First 1 | Set-Partition -NewDriveLetter $DriveLetter
+$Partition = Mount-DiskImage -ImagePath $vhd.FullName -PassThru | Get-Disk | Get-Partition | Where-Objet Type -eq Basic | Set-Partition -NewDriveLetter $DriveLetter
+Dismount-VHD -Path $VHDBackup.FullName
+Mount-VHD $VHDBackup.FullName
 
 Write-Host 'Drücke Enter um Wiederherstellung zu beenden.' -ForegroundColor Green
 pause
 
 
 Dismount-VHD -Path $VHDBackup.FullName
+
+
+
+
+

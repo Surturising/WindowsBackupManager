@@ -57,6 +57,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D50AA5B41E6A4B3EB7AD8751CC2AFBB9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FFE51434FB6043ED8FB7813D0B695D64"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -148,6 +154,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -260,6 +274,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D50AA5B41E6A4B3EB7AD8751CC2AFBB9"
+            {
+            "SourcePath" = "8:..\\WindowsBackup\\Scripts\\Mount-VHDXBackup.ps1"
+            "TargetName" = "8:Mount-VHDXBackup.ps1"
+            "Tag" = "8:"
+            "Folder" = "8:_D8D2E736C1CC44E1BB807FB706C0D3C3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -298,6 +332,17 @@
                         {
                         }
                     }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_D8D2E736C1CC44E1BB807FB706C0D3C3"
+                    {
+                    "Name" = "8:Scripts"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_D68887DFDD1A41E1AD7D61291F85FCF8"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_F534496A81F842C6B3DECA50873039D4"
@@ -328,7 +373,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:WindowsBackupManager"
         "ProductCode" = "8:{6DF3A6A3-0B2B-4659-833F-B9C2538923F9}"
-        "PackageCode" = "8:{BB1FE054-0924-4B4E-A7A1-A10948410FA2}"
+        "PackageCode" = "8:{4DE95115-1422-4E7C-BE10-FA11CA0C18F5}"
         "UpgradeCode" = "8:{3E329DC1-1A30-42BF-886B-450312893399}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"

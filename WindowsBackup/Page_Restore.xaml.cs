@@ -18,6 +18,7 @@ namespace WindowsBackup
         string backupFolder = "\\WindowsBackupManager";
         string windowsImageBackupFolder = "\\WindowsImageBackup";
         string anleitungRestoreImage = "PDf\\Anleitung_RestoreImage.pdf";
+        string mountVHDPSScript = "Scripts\\Mount-VHDXBackup.ps1";
 
         public Page_Restore()
         {
@@ -95,7 +96,7 @@ namespace WindowsBackup
 
             try
             {
-                /*
+                
                 DirectoryInfo backupFolder = new DirectoryInfo((cb_Backups.SelectedItem as ComboBoxItem).ToolTip.ToString());
 
                 Process mountBackup = new Process();
@@ -105,7 +106,7 @@ namespace WindowsBackup
                 mountBackup.StartInfo.Arguments = $"-NoProfile -ExecutionPolicy Bypass -Command \"{mountVHDPSScript} -BackupFolder {backupFolder.FullName}\"";
                 mountBackup.Start();
                 mountBackup.WaitForExit();
-                */
+                
             }
             catch (System.NullReferenceException)
             {
