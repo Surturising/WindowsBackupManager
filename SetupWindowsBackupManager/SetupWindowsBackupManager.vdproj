@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_4633199F1C6C4F0AB9748271331B59A3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_4C4EEB26C16B498992E7280DEA664C86"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -53,12 +59,6 @@
         {
         "MsmKey" = "8:_AC034D5945F1B5E638F556141974B4BE"
         "OwnerKey" = "8:_972E7D8316B54A93B1B06C48F2488137"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D50AA5B41E6A4B3EB7AD8751CC2AFBB9"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -243,6 +243,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4633199F1C6C4F0AB9748271331B59A3"
+            {
+            "SourcePath" = "8:..\\WindowsBackup\\Scripts\\Mount-VHDXBackup.ps1"
+            "TargetName" = "8:Mount-VHDXBackup.ps1"
+            "Tag" = "8:"
+            "Folder" = "8:_D8D2E736C1CC44E1BB807FB706C0D3C3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AC034D5945F1B5E638F556141974B4BE"
             {
             "AssemblyRegister" = "3:1"
@@ -272,26 +292,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D50AA5B41E6A4B3EB7AD8751CC2AFBB9"
-            {
-            "SourcePath" = "8:..\\WindowsBackup\\Scripts\\Mount-VHDXBackup.ps1"
-            "TargetName" = "8:Mount-VHDXBackup.ps1"
-            "Tag" = "8:"
-            "Folder" = "8:_D8D2E736C1CC44E1BB807FB706C0D3C3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
