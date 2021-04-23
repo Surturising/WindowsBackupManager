@@ -24,7 +24,7 @@ $VHDBackup = Get-ChildItem -Path "$BackupFolder\WindowsImageBackup\" *.vhdx -Rec
 
 $VHDBackup
 
-$Partition = Mount-DiskImage -ImagePath $vhd.FullName -PassThru | Get-Disk | Get-Partition 
+$Partition = Mount-DiskImage -ImagePath $VHDBackup.FullName -PassThru | Get-Disk | Get-Partition 
 $Partition | Where-Object Type -eq Basic | Set-Partition -NewDriveLetter $DriveLetter
 Dismount-VHD -Path $VHDBackup.FullName
 Mount-VHD $VHDBackup.FullName
