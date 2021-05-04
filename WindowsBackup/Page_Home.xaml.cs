@@ -18,6 +18,7 @@ namespace WindowsBackup
         string xmlUserdataDrives = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\WindowsBackupManager\\userdata_drives.xml";
         string backupFolder = "\\WindowsBackupManager";
         string windowsImageBackupFolder = "\\WindowsImageBackup";
+        string xmlUserdataSchedule = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\WindowsBackupManager\\userdata_schedule.xml";
         string backupSuccessLog = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\WindowsBackupManager\\backupSuccessLog.txt";
 
         public Page_Home()
@@ -26,7 +27,7 @@ namespace WindowsBackup
 
             if (File.Exists(backupSuccessLog))
             {
-                LoadPage(ref sp_DiagramsIsSuccessfull);
+                LoadPage();
             }
             
         }
@@ -77,8 +78,6 @@ namespace WindowsBackup
             scheduledTask.Start();
             scheduledTask.WaitForExit();
 
-            LoadPage(ref sp_DiagramsIsSuccessfull);
-
 
 
             if (result == MessageBoxResult.Yes )
@@ -88,81 +87,72 @@ namespace WindowsBackup
         }
 
 
-        private void LoadPage(ref StackPanel stack)
+        private void LoadPage()
         {
             string[] backupLog = File.ReadAllText(backupSuccessLog).Split('\n');
 
-
+            string lastSuccessfullBackup = "";
+            bool islastBackupSuccessfull = false;
+            string lastBackupDate = "";
+            int sumSuccesfullBackups = 0;
+            int sumFailedBackups = 0;
+            
             foreach (string log in backupLog)
             {
                 if (log.Contains("True"))
                 {
-                    AddCanvas(ref stack, log.Split(' ')[0].Replace(".", ""), true);
+                    //AddCanvas(ref stack, log.Split(' ')[0].Replace(".", ""), true);
+                    lastSuccessfullBackup = log.Split(' ')[0];
+                    islastBackupSuccessfull = true;
+                    sumFailedBackups++;
                 }
                 else
                 {
-                    AddCanvas(ref stack, log.Split(' ')[0].Replace(".", ""), false);
+                    islastBackupSuccessfull = false;
+                    sumSuccesfullBackups++;
                 }
 
+                lastBackupDate = log.Split(' ')[0];
+            }
+
+            if (File.Exists(xmlUserdataSchedule))
+            {
+               
+                XmlSerializer xs = new XmlSerializer(typeof(XML_Schedule));
+                FileStream read = new FileStream(xmlUserdataSchedule, FileMode.Open, FileAccess.Read, FileShare.Read);
+
+                XML_Schedule daten = (XML_Schedule)xs.Deserialize(read);
+
+
+                if (true)
+                {
+
+                }
 
             }
 
-        }
 
-        private static void AddCanvas(ref StackPanel stackPanel, string date, bool isSuccess)
-        {
+            //Daten Laden
+            tb_lastBackupSuccess.Text = lastSuccessfullBackup;
 
-            //Farbe für Canvas auswählen
-            Brush canvasBrush;
-            string toolTip;
-
-            //Ordner in Datum mit Punkten umwandeln
-            date = date.Substring(0, 2) + "." + date.Substring(2, 2) + "." + date.Substring(4);
-
-            if (isSuccess)
+            if (islastBackupSuccessfull == true)
             {
-                canvasBrush = Brushes.Green;
-
-                toolTip = $"Die Sicherung am {date} wurde erfolgreich erstellt.";
+                tb_isLastBackupSuccess.Text = "Erfolgreich";
+                tb_isLastBackupSuccess.Foreground = Brushes.Green;
+                tb_isLastBackupSuccess.ToolTip = $"Das Backup vom {lastBackupDate} war erfolgreich.";
             }
             else
             {
-                canvasBrush = Brushes.Red;
-                toolTip = $"Die Sicherung am {date} ist fehlgeschlagen.";
+                tb_isLastBackupSuccess.Text = "Fehlgeschlagen";
+                tb_isLastBackupSuccess.Foreground = Brushes.Red;
+                tb_isLastBackupSuccess.ToolTip = $"Das Backup vom {lastBackupDate} ist fehlgeschlagen.";
             }
 
-
-            TransformGroup transformGroup = new TransformGroup();
-
-            ScaleTransform scaleTransform = new ScaleTransform();
-            SkewTransform skewTransform = new SkewTransform();
-            RotateTransform rotateTransform = new RotateTransform();
-            rotateTransform.Angle = -90.001;
-            TranslateTransform translateTransform = new TranslateTransform();
-
-            transformGroup.Children.Add(scaleTransform);
-            transformGroup.Children.Add(skewTransform);
-            transformGroup.Children.Add(rotateTransform);
-            transformGroup.Children.Add(translateTransform);
-
-
-            TextBlock textBlock = new TextBlock();
-            textBlock.Text = date;
-            textBlock.RenderTransformOrigin = new Point(0.85, 2.6);
-            textBlock.RenderTransform = transformGroup;
-
-
-            Canvas canvas = new Canvas();
-            canvas.Height = 100;
-            canvas.Width = 30;
-            canvas.Background = canvasBrush;
-            canvas.HorizontalAlignment = HorizontalAlignment.Left;
-            canvas.ToolTip = toolTip;
-            canvas.Margin = new Thickness(20, 0, 0, 0);
-
-            canvas.Children.Add(textBlock);
-
-            stackPanel.Children.Add(canvas);
+            tb_sumFailedBackups.Text = sumFailedBackups.ToString();
+            tb_sumFailedBackups.ToolTip = $"{sumFailedBackups}/{sumFailedBackups + sumSuccesfullBackups} Backups fehlgeschlagen.";
+            
+            tb_sumSuccesfullBackups.Text = sumSuccesfullBackups.ToString();
+            tb_sumSuccesfullBackups.ToolTip = $"{sumSuccesfullBackups}/{sumFailedBackups + sumSuccesfullBackups} Backups erfolgreich.";
         }
     }
 }

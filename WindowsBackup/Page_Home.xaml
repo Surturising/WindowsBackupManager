@@ -9,12 +9,50 @@
       Title="Page_Home">
 
     <Grid Grid.Column="1">
-        <StackPanel Margin="70,100,100,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="199*"/>
+            <ColumnDefinition Width="201*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="223*"/>
+            <RowDefinition Height="227*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="70,100,100,10" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <TextBlock Text="Home:" FontWeight="Bold" FontSize="14"></TextBlock>
 
-            <StackPanel x:Name="sp_DiagramsIsSuccessfull" Margin="0,10,0,0" Orientation="Horizontal"></StackPanel >
+            <StackPanel x:Name="sp_DiagramsIsSuccessfull" Margin="0,10,0,0" Orientation="Horizontal">
+                <TextBlock Text="Letzte Sicherung: " FontSize="16"></TextBlock>
+                <TextBlock x:Name="tb_isLastBackupSuccess" FontSize="16" Margin="110,0,0,0"></TextBlock>
+            </StackPanel >
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Letzte erfolgreiche Sicherung: " FontSize="16"></TextBlock>
+                <TextBlock x:Name="tb_lastBackupSuccess" FontSize="16" Margin="21,0,0,0"></TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Nächste Sicherung geplant am: " FontSize="16"></TextBlock>
+                <TextBlock x:Name="tb_nextBackup" FontSize="16" Margin="10,0,0,0"></TextBlock>
+            </StackPanel>
+
         </StackPanel>
-        <Button x:Name="bt_StartBackup" Content="Sicherung Starten" VerticalAlignment="Bottom" Height="40" Margin="70,0,50,70" Click="bt_StartBackup_Click"></Button>
-        <Button x:Name="bt_DeleteConfig" Content="Konfiguration zurücksetzen" VerticalAlignment="Bottom" Height="40" Margin="70, 20,50,20" Click="bt_DeleteConfig_Click"></Button>
+
+
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <TextBlock Text="Erfolgreiche Sicherungen" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"></TextBlock>
+            <TextBlock x:Name="tb_sumSuccesfullBackups" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Green" FontSize="50"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <TextBlock Text="Fehlgeschlagene Sicherungen" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"></TextBlock>
+            <TextBlock x:Name="tb_sumFailedBackups" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" FontSize="50"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.ColumnSpan="1" HorizontalAlignment="Center" Margin="194,120,72,5" Width="132"/>
+
+        <StackPanel HorizontalAlignment="Center" Margin="102,120,174,5" Width="126" Grid.Column="1"/>
+
+        <Button x:Name="bt_StartBackup" Content="Sicherung Starten" VerticalAlignment="Bottom" Height="40" Margin="70,0,50,70" Click="bt_StartBackup_Click" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Button x:Name="bt_DeleteConfig" Content="Konfiguration zurücksetzen" VerticalAlignment="Bottom" Height="40" Margin="70,0,50,20" Click="bt_DeleteConfig_Click" Grid.ColumnSpan="2" Grid.Row="1"/>
     </Grid>
 </Page>
