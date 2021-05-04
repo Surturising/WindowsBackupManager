@@ -104,12 +104,12 @@ namespace WindowsBackup
                     //AddCanvas(ref stack, log.Split(' ')[0].Replace(".", ""), true);
                     lastSuccessfullBackup = log.Split(' ')[0];
                     islastBackupSuccessfull = true;
-                    sumFailedBackups++;
+                    sumSuccesfullBackups++;
                 }
                 else
                 {
                     islastBackupSuccessfull = false;
-                    sumSuccesfullBackups++;
+                    sumFailedBackups++;
                 }
 
                 lastBackupDate = log.Split(' ')[0];
@@ -139,13 +139,13 @@ namespace WindowsBackup
             {
                 tb_isLastBackupSuccess.Text = "Erfolgreich";
                 tb_isLastBackupSuccess.Foreground = Brushes.Green;
-                tb_isLastBackupSuccess.ToolTip = $"Das Backup vom {lastBackupDate} war erfolgreich.";
+                tb_isLastBackupSuccess.ToolTip = $"Die Sicherung vom {lastBackupDate} war erfolgreich.";
             }
             else
             {
                 tb_isLastBackupSuccess.Text = "Fehlgeschlagen";
                 tb_isLastBackupSuccess.Foreground = Brushes.Red;
-                tb_isLastBackupSuccess.ToolTip = $"Das Backup vom {lastBackupDate} ist fehlgeschlagen.";
+                tb_isLastBackupSuccess.ToolTip = $"Die Sicherung vom {lastBackupDate} ist fehlgeschlagen.";
             }
 
             tb_sumFailedBackups.Text = sumFailedBackups.ToString();

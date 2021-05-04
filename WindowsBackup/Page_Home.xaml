@@ -14,8 +14,8 @@
             <ColumnDefinition Width="201*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="223*"/>
-            <RowDefinition Height="227*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="43*"/>
         </Grid.RowDefinitions>
         <StackPanel Margin="70,100,100,10" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <TextBlock Text="Home:" FontWeight="Bold" FontSize="14"></TextBlock>
@@ -31,7 +31,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Nächste Sicherung geplant am: " FontSize="16"></TextBlock>
+                <TextBlock Text="Nächste geplante Sicherung: " FontSize="16"></TextBlock>
                 <TextBlock x:Name="tb_nextBackup" FontSize="16" Margin="10,0,0,0"></TextBlock>
             </StackPanel>
 
