@@ -26,8 +26,8 @@ Ein Windows-Tool um, mithilfe des integrierten Windows-Tools "wbadmin.exe", Wind
 # E-Mail Benachrichtigung - Erstellung der E-Mail Benachrichtigung
 ![grafik](https://user-images.githubusercontent.com/72456947/115730836-ebaf2000-a386-11eb-936d-39a605f9b444.png)
 
-# Löschen von Backups - Löschen von alten Backups mit Filtermöglichkeit
-![grafik](https://user-images.githubusercontent.com/72456947/119114568-910cf080-ba26-11eb-9ffc-2dd96e465546.png)
-
 # Backup Rücksicherung - Wiederherstellung von Backups
 ![grafik](https://user-images.githubusercontent.com/72456947/115731235-42b4f500-a387-11eb-8758-2fc758d9d7a2.png)
+
+# Löschen von Backups - Löschen von alten Backups mit Filtermöglichkeit
+![grafik](https://user-images.githubusercontent.com/72456947/119114568-910cf080-ba26-11eb-9ffc-2dd96e465546.png)
