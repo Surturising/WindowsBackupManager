@@ -67,6 +67,12 @@ namespace WindowsBackup
             SetMenuBox(btn_Ruecksicherung);
         }
 
+        private void btn_Trash_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Content = new Page_Trash();
+            SetMenuBox(btn_Trash);
+        }
+
         /// <summary>
         /// Läd die jeweilige Seite und färbt den Button entsprechend ein
         /// </summary>
@@ -90,7 +96,5 @@ namespace WindowsBackup
         {
             Close();
         }
-
-
     }
 }

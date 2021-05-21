@@ -75,6 +75,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DriveInformation.cs" />
+    <Compile Include="Page_Trash.xaml.cs">
+      <DependentUpon>Page_Trash.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SaveXMLData.cs" />
     <Compile Include="XML_Drives.cs" />
     <Compile Include="XML_Mail.cs" />
@@ -108,6 +111,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page_Schedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Trash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

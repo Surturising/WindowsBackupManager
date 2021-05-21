@@ -35,6 +35,10 @@
                 <Image Source="icon\restore.png" Height="50" Width="40"></Image>
             </Button>
 
+            <Button Background="LightGray" x:Name="btn_Trash" ToolTip="Backups löschen" Click="btn_Trash_Click">
+                <Image Source="C:\Users\David\source\repos\Surturising\WindowsBackupManager\WindowsBackup\icon\trash.png" Height="50" Width="40"></Image>
+            </Button>
+
             <Button Background="LightGray" x:Name="btn_exit" ToolTip="Exit" Click="btn_exit_Click">
                 <Image Source="icon\exit.png" Height="50" Width="40"></Image>
             </Button>

@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoveBackup", "MoveBackup\Mo
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupWindowsBackupManager", "SetupWindowsBackupManager\SetupWindowsBackupManager.vdproj", "{645A226C-5573-46BB-9107-2434BC1C9C16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveBackup", "RemoveBackup\RemoveBackup.csproj", "{FC38AEE1-D544-4DA6-877F-CDE2DF5DDF75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{FA2D399A-0921-4C7C-8648-BEEFEBDFEFCA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{645A226C-5573-46BB-9107-2434BC1C9C16}.Debug|Any CPU.ActiveCfg = Debug
 		{645A226C-5573-46BB-9107-2434BC1C9C16}.Release|Any CPU.ActiveCfg = Release
+		{FC38AEE1-D544-4DA6-877F-CDE2DF5DDF75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC38AEE1-D544-4DA6-877F-CDE2DF5DDF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC38AEE1-D544-4DA6-877F-CDE2DF5DDF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC38AEE1-D544-4DA6-877F-CDE2DF5DDF75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
