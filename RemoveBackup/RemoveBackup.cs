@@ -46,9 +46,6 @@ namespace RemoveBackup
 
                                 }
 
-                                Console.WriteLine($"{newSuccessLog.Substring(0, newSuccessLog.Length - 1)}");
-                                Console.ReadLine();
-
                                 File.WriteAllText(backupSuccessLog, newSuccessLog.Substring(0, newSuccessLog.Length -1));
                             }
 
