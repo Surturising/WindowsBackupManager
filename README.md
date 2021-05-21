@@ -15,7 +15,7 @@ Eine Tool mit dem man, mithilfe des integrierten Windows Tools "wbadmin.exe", Wi
 - Wiederherstellung von Backups
 
 # Home - Überblick über erfolgreiche und fehlerhafte Backups
-![grafik](![grafik](https://user-images.githubusercontent.com/72456947/117938402-4ba24200-b307-11eb-8dbd-f72ee0dfd001.png)
+![grafik](https://user-images.githubusercontent.com/72456947/117938402-4ba24200-b307-11eb-8dbd-f72ee0dfd001.png)
 
 # Festplattenverwaltung - Verwaltung von Quell- und Ziellaufwerken
 ![grafik](https://user-images.githubusercontent.com/72456947/115730595-bb678180-a386-11eb-90c9-19ada894a606.png)
